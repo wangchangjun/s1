@@ -41,8 +41,8 @@ public class DataGrabber {
             Database.ReadValue[][] retVal = database.read(CONSTANT.DAYS_READ_FROM_DB);
             if(retVal == null)
                 return;
-            int num = database.capacity > stockInfo.codeNames.size() ? stockInfo.codeNames.size():database.capacity;
-            for(int si = 0; si < num; ++si) {
+            //int num = database.capacity > stockInfo.codeNames.size() ? stockInfo.codeNames.size():database.capacity;
+            for(int si = 0; si < database.capacity; ++si) {
                 MemData data = new MemData();
                 data.add(retVal, si);
                 memStocksData[si] = data;
